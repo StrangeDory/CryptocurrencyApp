@@ -1,0 +1,230 @@
+<!DOCTYPE resources [<!ENTITY usd "USD"><!ENTITY all "ALL"><!ENTITY dzd "DZD"><!ENTITY ars "ARS">
+    <!ENTITY amd "AMD"><!ENTITY aud "AUD"><!ENTITY azn "AZN"><!ENTITY bhd "BHD"><!ENTITY bdt "BDT">
+    <!ENTITY byn "BYN"><!ENTITY bmd "BMD"><!ENTITY bob "BOB"><!ENTITY bam "BAM"><!ENTITY brl "BRL">
+    <!ENTITY bgn "BGN"><!ENTITY khr "KHR"><!ENTITY cad "CAD"><!ENTITY cad "CAD"><!ENTITY clp "CLP">
+    <!ENTITY cny "CNY"><!ENTITY cop "COP"><!ENTITY crc "CRC"><!ENTITY hrk "HRK"><!ENTITY cup "CUP">
+    <!ENTITY czk "CZK"><!ENTITY dkk "DKK"><!ENTITY dop "DOP"><!ENTITY egp "EGP"><!ENTITY eur "EUR">
+    <!ENTITY gel "GEL"><!ENTITY ghs "GHS"><!ENTITY gtq "GTQ"><!ENTITY hnl "HNL"><!ENTITY hkd "HKD">
+    <!ENTITY huf "HUF"><!ENTITY isk "ISK"><!ENTITY inr "INR"><!ENTITY idr "IDR"><!ENTITY irr "IRR">
+    <!ENTITY iqd "IQD"><!ENTITY ils "ILS"><!ENTITY jmd "JMD"><!ENTITY jpy "JPY"><!ENTITY jod "JOD">
+    <!ENTITY kzt "KZT"><!ENTITY kes "KES"><!ENTITY kwd "KWD"><!ENTITY kgs "KGS"><!ENTITY lbp "LBP">
+    <!ENTITY mkd "MKD"><!ENTITY myr "MYR"><!ENTITY mur "MUR"><!ENTITY mxn "MXN"><!ENTITY mdl "MDL">
+    <!ENTITY mnt "MNT"><!ENTITY mad "MAD"><!ENTITY mmk "MMK"><!ENTITY nad "NAD"><!ENTITY npr "NPR">
+    <!ENTITY twd "TWD"><!ENTITY nzd "NZD"><!ENTITY nio "NIO"><!ENTITY ngn "NGN"><!ENTITY nok "NOK">
+    <!ENTITY omr "OMR"><!ENTITY pkr "PKR"><!ENTITY pab "PAB"><!ENTITY pen "PEN"><!ENTITY php "PHP">
+    <!ENTITY pln "PLN"><!ENTITY gbp "GBP"><!ENTITY qar "QAR"><!ENTITY ron "RON"><!ENTITY rub "RUB">
+    <!ENTITY sar "SAR"><!ENTITY rsd "RSD"><!ENTITY sgd "SGD"><!ENTITY zar "ZAR"><!ENTITY krw "KRW">
+    <!ENTITY ssp "SSP"><!ENTITY ves "VES"><!ENTITY lkr "LKR"><!ENTITY sek "SEK"><!ENTITY chf "CHF">
+    <!ENTITY thb "THB"><!ENTITY ttd "TTD"><!ENTITY tnd "TND"><!ENTITY try "TRY"><!ENTITY ugx "UGX">
+    <!ENTITY uah "UAH"><!ENTITY aed "AED"><!ENTITY uyu "UYU"><!ENTITY uzs "UZS"><!ENTITY vnd "VND">
+    ]>
+
+<resources>
+    <string name="app_name">Cryptocurrency App</string>
+    <string name="total_market_cap">Total market cap:</string>
+    <string name="total_24hr_volume">Total 24hr volume:</string>
+    <string name="bitcoin_market_cap">Bitcoin percentage of market cap:</string>
+    <string name="active_currencies">Active Currencies:</string>
+    <string name="active_assets">Active Assets:</string>
+    <string name="active_markets">Active Markets:</string>
+    <string name="image_view_description">Crypto-currency logo</string>
+    <string name="price">Price: €%,.2f</string>
+    <string name="bitcoin_ratio">To Bitcoin ratio: %.2f</string>
+    <string name="market_cap">Market cap: €%,.2f</string>
+    <string name="day_delta">24hr: %.2f%%</string>
+    <string name="week_delta">7d: %.2f%%</string>
+    <string name="price_eur">€%.2f</string>
+    <string name="rank">Rank: #%d</string>
+
+    <string-array name="fiat_currency_code_array" translatable="false">
+        <item>"&usd;"</item>
+        <item>"&all;"</item>
+        <item>"&dzd;"</item>
+        <item>"&ars;"</item>
+        <item>"&amd;"</item>
+        <item>"&aud;"</item>
+        <item>"&azn;"</item>
+        <item>"&bhd;"</item>
+        <item>"&bdt;"</item>
+        <item>"&byn;"</item>
+        <item>"&bmd;"</item>
+        <item>"&bob;"</item>
+        <item>"&bam;"</item>
+        <item>"&brl;"</item>
+        <item>"&bgn;"</item>
+        <item>"&khr;"</item>
+        <item>"&cad;"</item>
+        <item>"&clp;"</item>
+        <item>"&cny;"</item>
+        <item>"&cop;"</item>
+        <item>"&crc;"</item>
+        <item>"&hrk;"</item>
+        <item>"&cup;"</item>
+        <item>"&czk;"</item>
+        <item>"&dkk;"</item>
+        <item>"&dop;"</item>
+        <item>"&egp;"</item>
+        <item>"&eur;"</item>
+        <item>"&gel;"</item>
+        <item>"&ghs;"</item>
+        <item>"&gtq;"</item>
+        <item>"&hnl;"</item>
+        <item>"&hkd;"</item>
+        <item>"&huf;"</item>
+        <item>"&isk;"</item>
+        <item>"&inr;"</item>
+        <item>"&idr;"</item>
+        <item>"&irr;"</item>
+        <item>"&iqd;"</item>
+        <item>"&ils;"</item>
+        <item>"&jmd;"</item>
+        <item>"&jpy;"</item>
+        <item>"&jod;"</item>
+        <item>"&kzt;"</item>
+        <item>"&kes;"</item>
+        <item>"&kwd;"</item>
+        <item>"&kgs;"</item>
+        <item>"&lbp;"</item>
+        <item>"&mkd;"</item>
+        <item>"&myr;"</item>
+        <item>"&mur;"</item>
+        <item>"&mxn;"</item>
+        <item>"&mdl;"</item>
+        <item>"&mnt;"</item>
+        <item>"&mad;"</item>
+        <item>"&mmk;"</item>
+        <item>"&nad;"</item>
+        <item>"&npr;"</item>
+        <item>"&twd;"</item>
+        <item>"&nzd;"</item>
+        <item>"&nio;"</item>
+        <item>"&ngn;"</item>
+        <item>"&nok;"</item>
+        <item>"&omr;"</item>
+        <item>"&pkr;"</item>
+        <item>"&pab;"</item>
+        <item>"&pen;"</item>
+        <item>"&php;"</item>
+        <item>"&pln;"</item>
+        <item>"&gbp;"</item>
+        <item>"&qar;"</item>
+        <item>"&ron;"</item>
+        <item>"&rub;"</item>
+        <item>"&sar;"</item>
+        <item>"&rsd;"</item>
+        <item>"&sgd;"</item>
+        <item>"&zar;"</item>
+        <item>"&krw;"</item>
+        <item>"&ssp;"</item>
+        <item>"&ves;"</item>
+        <item>"&lkr;"</item>
+        <item>"&sek;"</item>
+        <item>"&chf;"</item>
+        <item>"&thb;"</item>
+        <item>"&ttd;"</item>
+        <item>"&tnd;"</item>
+        <item>"&try;"</item>
+        <item>"&ugx;"</item>
+        <item>"&uah;"</item>
+        <item>"&aed;"</item>
+        <item>"&uyu;"</item>
+        <item>"&uzs;"</item>
+        <item>"&vnd;"</item>
+    </string-array>
+
+    <string-array name="fiat_currency_sign_array" translatable="false">
+        <item>"$"</item>
+        <item>"L"</item>
+        <item>"د.ج"</item>
+        <item>"$"</item>
+        <item>"֏"</item>
+        <item>"$"</item>
+        <item>"₼"</item>
+        <item>".د.ب"</item>
+        <item>"৳"</item>
+        <item>"Br"</item>
+        <item>"$"</item>
+        <item>"Bs."</item>
+        <item>"KM"</item>
+        <item>"R$"</item>
+        <item>"лв"</item>
+        <item>"៛"</item>
+        <item>"$"</item>
+        <item>"$"</item>
+        <item>"¥"</item>
+        <item>"$"</item>
+        <item>"₡"</item>
+        <item>"kn"</item>
+        <item>"$"</item>
+        <item>"Kč"</item>
+        <item>"kr"</item>
+        <item>"$"</item>
+        <item>"£"</item>
+        <item>"€"</item>
+        <item>"₾""</item>
+        <item>"₾₵"</item>
+        <item>"₾Q"</item>
+        <item>"L"</item>
+        <item>"$"</item>
+        <item>"Ft"</item>
+        <item>"kr"</item>
+        <item>"₹"</item>
+        <item>"Rp"</item>
+        <item>"﷼"</item>
+        <item>"ع.د"</item>
+        <item>"₪"</item>
+        <item>"$"</item>
+        <item>"¥"</item>
+        <item>"د.ا"</item>
+        <item>"₸"</item>
+        <item>"Sh"</item>
+        <item>"د.ك"</item>
+        <item>"с"</item>
+        <item>"ل.ل"</item>
+        <item>"ден"</item>
+        <item>"RM"</item>
+        <item>"₨"</item>
+        <item>"$"</item>
+        <item>"L"</item>
+        <item>"₮"</item>
+        <item>"د.م."</item>
+        <item>"Ks"</item>
+        <item>"$"</item>
+        <item>"₨"</item>
+        <item>"$"</item>
+        <item>"$"</item>
+        <item>"C$"</item>
+        <item>"₦"</item>
+        <item>"kr"</item>
+        <item>"ر.ع."</item>
+        <item>"₨"</item>
+        <item>"B/."</item>
+        <item>"S/."</item>
+        <item>"₱"</item>
+        <item>"zł"</item>
+        <item>"£"</item>
+        <item>"ر.ق"</item>
+        <item>"lei"</item>
+        <item>"₽"</item>
+        <item>"ر.س"</item>
+        <item>"дин."</item>
+        <item>"$"</item>
+        <item>"Rs"</item>
+        <item>"₩"</item>
+        <item>"£"</item>
+        <item>"Bs."</item>
+        <item>"Rs"</item>
+        <item>"kr"</item>
+        <item>"Fr"</item>
+        <item>"฿"</item>
+        <item>"$"</item>
+        <item>"د.ت"</item>
+        <item>"₺"</item>
+        <item>"Sh"</item>
+        <item>"₴"</item>
+        <item>"د.إ"</item>
+        <item>"$"</item>
+        <item>"so'm"</item>
+        <item>"₫"</item>
+    </string-array>
+</resources>

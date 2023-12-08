@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/global_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:elevation="4dp"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/Base.ThemeOverlay.AppCompat.Light" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/total_market_cap_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_16"
+            android:text="@string/total_market_cap" />
+
+        <TextView
+            android:id="@+id/total_market_cap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/total_market_cap_label"
+            android:layout_alignBottom="@id/total_market_cap_label"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/total_market_cap_label"
+            android:padding="@dimen/dimen_16"
+            android:textAlignment="textEnd"
+            tools:text="12345" />
+
+        <TextView
+            android:id="@+id/total_day_volume_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_market_cap_label"
+            android:padding="@dimen/dimen_16"
+            android:text="@string/total_24hr_volume" />
+
+        <TextView
+            android:id="@+id/total_day_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/total_day_volume_label"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/total_day_volume_label"
+            android:padding="@dimen/dimen_16"
+            android:textAlignment="textEnd"
+            tools:text="12345" />
+
+        <TextView
+            android:id="@+id/percentage_of_market_cap_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/total_day_volume_label"
+            android:padding="@dimen/dimen_16"
+            android:text="@string/bitcoin_market_cap" />
+
+        <TextView
+            android:id="@+id/percentage_of_market_cap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/percentage_of_market_cap_label"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/percentage_of_market_cap_label"
+            android:padding="@dimen/dimen_16"
+            android:textAlignment="textEnd"
+            tools:text="12345" />
+
+        <TextView
+            android:id="@+id/active_currencies_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/percentage_of_market_cap_label"
+            android:padding="@dimen/dimen_16"
+            android:text="@string/active_currencies" />
+
+        <TextView
+            android:id="@+id/active_currencies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/active_currencies_label"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/active_currencies_label"
+            android:padding="@dimen/dimen_16"
+            android:textAlignment="textEnd"
+            tools:text="12345" />
+
+        <TextView
+            android:id="@+id/active_assets_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/active_currencies_label"
+            android:padding="@dimen/dimen_16"
+            android:text="@string/active_assets" />
+
+        <TextView
+            android:id="@+id/active_assets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/active_assets_label"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/active_assets_label"
+            android:padding="@dimen/dimen_16"
+            android:textAlignment="textEnd"
+            tools:text="12345" />
+
+        <TextView
+            android:id="@+id/active_markets_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/active_assets_label"
+            android:padding="@dimen/dimen_16"
+            android:text="@string/active_markets" />
+
+        <TextView
+            android:id="@+id/active_markets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/active_markets_label"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/active_markets_label"
+            android:padding="@dimen/dimen_16"
+            android:textAlignment="textEnd"
+            tools:text="12345" />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

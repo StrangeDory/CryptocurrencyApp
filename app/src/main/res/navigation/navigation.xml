@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/nav_main">
+
+    <fragment
+        android:id="@+id/nav_main"
+        android:name="com.example.cryptocurrencyapp.ui.MainFragment"
+        tools:layout="@layout/main_fragment"/>
+
+    <fragment
+        android:id="@+id/nav_currency_detail"
+        android:name="com.example.cryptocurrencyapp.ui.CurrencyDetailFragment"
+        tools:layout="@layout/fragment_currency_detail">
+        <argument
+            android:name="item"
+            android:defaultValue="@null"
+            app:argType="com.example.cryptocurrencyapp.model.CryptoItem"
+            app:nullable="true" />
+    </fragment>
+
+</navigation>
