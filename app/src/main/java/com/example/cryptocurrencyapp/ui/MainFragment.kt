@@ -24,7 +24,7 @@ import retrofit2.Response
 class MainFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener {
 
     private lateinit var binding: MainFragmentBinding
-    private val adapter = CryptoAdapter()
+    private lateinit var adapter: CryptoAdapter
     private val cryptoService = APIUtils.cryptoService
     val cryptoList = mutableListOf<CryptoItem>()
 
@@ -34,6 +34,7 @@ class MainFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener {
         savedInstanceState: Bundle?
     ): View {
         binding = MainFragmentBinding.inflate(inflater, container, false)
+        adapter = CryptoAdapter(requireContext())
         with(binding){
             cryptocurrencyRecyclerView.adapter = adapter
             cryptocurrencyRecyclerView.layoutManager = LinearLayoutManager(context)

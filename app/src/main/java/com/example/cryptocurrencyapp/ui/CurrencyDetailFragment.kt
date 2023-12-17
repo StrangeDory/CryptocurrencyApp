@@ -22,6 +22,7 @@ import com.example.cryptocurrencyapp.getImageUrl
 import com.example.cryptocurrencyapp.model.CryptoItem
 import com.example.cryptocurrencyapp.setDeltaString
 import com.example.cryptocurrencyapp.setStyleToSubstring
+import com.example.cryptocurrencyapp.showPopupWindow
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.decodeFromString
 
@@ -29,7 +30,6 @@ import kotlinx.serialization.decodeFromString
 class CurrencyDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentCurrencyDetailBinding
-    private lateinit var popupWindow: PopupWindow
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreateView(
@@ -76,7 +76,7 @@ class CurrencyDetailFragment : Fragment() {
                 val drawable = bounds[drawableEnd]
 
                 if (drawable != null && event.rawX >= (binding.priceCurrency.right - drawable.bounds.width())) {
-                    showPopupWindow(binding.priceCurrency, R.string.price_info)
+                    showPopupWindow(requireContext(), binding.priceCurrency, R.string.price_info)
                     return@setOnTouchListener true
                 }
             }
@@ -98,7 +98,7 @@ class CurrencyDetailFragment : Fragment() {
                 val drawable = bounds[drawableEnd]
 
                 if (drawable != null && event.rawX >= (binding.marketCapUsd.right - drawable.bounds.width())) {
-                    showPopupWindow(binding.marketCapUsd, R.string.market_cap_info)
+                    showPopupWindow(requireContext(), binding.marketCapUsd, R.string.market_cap_info)
                     return@setOnTouchListener true
                 }
             }
@@ -120,7 +120,7 @@ class CurrencyDetailFragment : Fragment() {
                 val drawable = bounds[drawableEnd]
 
                 if (drawable != null && event.rawX >= (binding.percentChange1hr.right - drawable.bounds.width())) {
-                    showPopupWindow(binding.percentChange1hr, R.string.delta_hour_info)
+                    showPopupWindow(requireContext(), binding.percentChange1hr, R.string.delta_hour_info)
                     return@setOnTouchListener true
                 }
             }
@@ -142,7 +142,7 @@ class CurrencyDetailFragment : Fragment() {
                 val drawable = bounds[drawableEnd]
 
                 if (drawable != null && event.rawX >= (binding.percentChange24h.right - drawable.bounds.width())) {
-                    showPopupWindow(binding.percentChange24h, R.string.delta_day_info)
+                    showPopupWindow(requireContext(), binding.percentChange24h, R.string.delta_day_info)
                     return@setOnTouchListener true
                 }
             }
@@ -164,7 +164,7 @@ class CurrencyDetailFragment : Fragment() {
                 val drawable = bounds[drawableEnd]
 
                 if (drawable != null && event.rawX >= (binding.percentChange7d.right - drawable.bounds.width())) {
-                    showPopupWindow(binding.percentChange7d, R.string.delta_week_info)
+                    showPopupWindow(requireContext(), binding.percentChange7d, R.string.delta_week_info)
                     return@setOnTouchListener true
                 }
             }
@@ -173,47 +173,5 @@ class CurrencyDetailFragment : Fragment() {
         }
 
         return binding.root
-    }
-
-    @SuppressLint("ClickableViewAccessibility")
-    private fun showPopupWindow(anchorView: View, textResId: Int) {
-        val inflater = context?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val popupView = inflater.inflate(R.layout.popup_layout, null)
-
-        popupView.findViewById<TextView>(R.id.infoTextView).text = getString(textResId)
-
-        popupWindow = PopupWindow(
-            popupView,
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            true
-        )
-
-        val location = IntArray(2)
-        anchorView.getLocationOnScreen(location)
-
-        popupWindow.showAtLocation(anchorView, Gravity.NO_GRAVITY, location[0], location[1])
-
-        val container = popupWindow.contentView.rootView
-        val context = popupWindow.contentView.context
-        val resources = context.resources
-        val width = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            200f,
-            resources.displayMetrics
-        ).toInt()
-        val height = TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP,
-            150f,
-            resources.displayMetrics
-        ).toInt()
-        popupWindow.width = width
-        popupWindow.height = height
-        container.setOnTouchListener { _, event ->
-            if (event.action == MotionEvent.ACTION_DOWN) {
-                popupWindow.dismiss()
-            }
-            true
-        }
     }
 }
