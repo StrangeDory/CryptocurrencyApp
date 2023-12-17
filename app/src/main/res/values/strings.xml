@@ -36,6 +36,13 @@
     <string name="price_eur">€%.2f</string>
     <string name="rank">Rank: #%d</string>
 
+    <string name="price_info">Price of cryptocurrency in EUR</string>
+    <string name="bitcoin_ratio_info">How much does cryptocurrency cost relative to Bitcoin</string>
+    <string name="market_cap_info">A market cap is a large number that shows how many tokens are in circulation and their total market price</string>
+    <string name="delta_hour_info">Percent of change in the last 1h</string>
+    <string name="delta_day_info">Percent of change in the last 24h</string>
+    <string name="delta_week_info">Percent of change in the last 7 days</string>
+
     <string-array name="fiat_currency_code_array" translatable="false">
         <item>"&usd;"</item>
         <item>"&all;"</item>

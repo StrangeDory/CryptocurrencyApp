@@ -32,10 +32,19 @@ data class CryptoItem(val id: Int = 0,
                       @SerializedName("lastUpdated")val lastUpdated: String? = null,
                       @SerializedName("dateAdded")val dateAdded: String? = null,
                       @SerializedName("tags")val tags: List<String> = emptyList(),
-                      @SerializedName("platform") @Contextual val platform: Any? = null,
-                      @SerializedName("selfReportedCirculatingSupply") @Contextual val selfReportedCirculatingSupply: Any? = null,
-                      @SerializedName("selfReportedMarketCap") @Contextual val selfReportedMarketCap: Any? = null,
+                      @SerializedName("platform") val platform: Platform? = null,
+                      @SerializedName("selfReportedCirculatingSupply") val selfReportedCirculatingSupply: Int? = null,
+                      @SerializedName("selfReportedMarketCap") val selfReportedMarketCap: Double? = null,
                       @SerializedName("quote")val quote: Quote? = null
+): java.io.Serializable
+
+@Serializable
+data class Platform(
+    val id: Int,
+    val name: String,
+    val symbol: String,
+    val slug: String,
+    @SerializedName("token_address") val tokenAddress: String
 ): java.io.Serializable
 
 @Serializable

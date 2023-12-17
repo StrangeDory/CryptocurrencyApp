@@ -65,7 +65,7 @@ class MainFragment: Fragment(), SwipeRefreshLayout.OnRefreshListener {
         val filteredList = mutableListOf<CryptoItem>()
 
         for (item in cryptoList) {
-            if (item.name.toLowerCase().contains(text.toLowerCase())) {
+            if (item.name.toLowerCase().contains(text.toLowerCase()) || item.symbol.toLowerCase().contains(text.toLowerCase())) {
                 filteredList.add(item)
             }
         }
